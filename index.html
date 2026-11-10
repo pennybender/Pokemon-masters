@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PokéDex Pro</title>
+<meta name="description" content="Search every Pokémon, check type matchups, compare stats and build a team.">
+<meta name="theme-color" content="#e3350d">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="PokéDex Pro">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f4f8;--panel:#ffffff;--panel2:#f7f8fb;--ink:#1b1d24;--muted:#6a7080;--line:#e3e6ee;
+  --accent:#e3350d;--accent2:#c22c09;--good:#2e9e5b;--bad:#d64045;--shadow:0 1px 2px rgba(20,22,35,.06),0 8px 24px rgba(20,22,35,.06);
+  --radius:16px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12141b;--panel:#1b1e28;--panel2:#222634;--ink:#eceef5;--muted:#9aa0b3;--line:#2d3243;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{--bg:#12141b;--panel:#1b1e28;--panel2:#222634;--ink:#eceef5;--muted:#9aa0b3;--line:#2d3243;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+a{color:inherit}
+img{max-width:100%}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.bar{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Press Start 2P",monospace;font-size:13px;letter-spacing:.5px;white-space:nowrap}
+.logo img{height:34px;width:auto;flex:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+.search{position:relative;flex:1;min-width:0}
+.search input{width:100%;border:0;border-radius:999px;padding:10px 16px 10px 38px;background:#fff;color:#1b1d24;outline:none;box-shadow:inset 0 0 0 2px transparent}
+.search input:focus{box-shadow:inset 0 0 0 2px #ffcb05}
+.search .ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;opacity:.5;color:#1b1d24}
+.suggest{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--panel);color:var(--ink);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;display:none;max-height:60vh;overflow-y:auto}
+.suggest.open{display:block}
+.suggest button{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;padding:6px 12px;text-align:left;cursor:pointer}
+.suggest button:hover,.suggest button.hl{background:var(--panel2)}
+.suggest img{width:40px;height:40px;object-fit:contain;image-rendering:pixelated}
+.suggest .num{color:var(--muted);font-size:12px;margin-left:auto}
+.iconbtn{border:0;background:rgba(255,255,255,.18);color:#fff;border-radius:10px;width:38px;height:38px;display:grid;place-items:center;cursor:pointer;flex:none}
+.iconbtn:hover{background:rgba(255,255,255,.3)}
+nav.tabs{background:var(--accent2)}
+nav.tabs .inner{max-width:1100px;margin:0 auto;display:flex;gap:2px;padding:0 10px;overflow-x:auto;scrollbar-width:none}
+nav.tabs a{padding:10px 14px;text-decoration:none;font-weight:600;font-size:14px;color:rgba(255,255,255,.75);border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a.on{color:#fff;border-bottom-color:#ffcb05}
+
+main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+.panel{background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+h1,h2,h3{margin:0}
+h2.sec{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 12px}
+.muted{color:var(--muted)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.stack>*+*{margin-top:16px}
+.btn{border:0;border-radius:10px;padding:9px 14px;background:var(--panel2);cursor:pointer;font-weight:600;box-shadow:inset 0 0 0 1px var(--line)}
+.btn:hover{filter:brightness(.97)}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:none}
+.btn.sm{padding:6px 10px;font-size:13px}
+select,.field{border:0;border-radius:10px;padding:9px 12px;background:var(--panel2);box-shadow:inset 0 0 0 1px var(--line)}
+.loading{display:grid;place-items:center;min-height:50vh;color:var(--muted);gap:12px}
+.spin{width:44px;height:44px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* type pills */
+.type{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.25);border:0;cursor:pointer;min-width:74px}
+.type.sm{padding:2px 8px;min-width:0;font-size:10.5px}
+.type.off{opacity:.3}
+.t-normal{background:#9fa19f}.t-fire{background:#e62829}.t-water{background:#2980ef}.t-electric{background:#e6b800}.t-grass{background:#3fa129}.t-ice{background:#3dcef3}.t-fighting{background:#ff8000}.t-poison{background:#9141cb}.t-ground{background:#915121}.t-flying{background:#81b9ef}.t-psychic{background:#ef4179}.t-bug{background:#91a119}.t-rock{background:#afa981}.t-ghost{background:#704170}.t-dragon{background:#5060e1}.t-dark{background:#624d4e}.t-steel{background:#60a1b8}.t-fairy{background:#ef70ef}
+
+/* Pokémon detail */
+.hero{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:24px;align-items:start}
+.art{position:relative;border-radius:20px;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}
+.art::before{content:"";position:absolute;inset:0;background:var(--tc,#999);opacity:.22}
+.art::after{content:"";position:absolute;width:82%;aspect-ratio:1;border-radius:50%;border:18px solid var(--tc,#999);opacity:.1}
+.art img{position:relative;z-index:1;width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.2))}
+.art .tools{position:absolute;z-index:2;top:10px;right:10px;display:flex;gap:6px}
+.chip{border:0;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700;background:var(--panel);box-shadow:var(--shadow);cursor:pointer}
+.chip.on{background:#ffcb05;color:#1b1d24}
+.dexno{font-family:"Press Start 2P",monospace;font-size:12px;color:var(--muted)}
+.pname{font-size:clamp(26px,5vw,40px);font-weight:800;margin:6px 0 2px;letter-spacing:-.02em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:16px}
+.fact{background:var(--panel2);border-radius:12px;padding:10px 12px}
+.fact b{display:block;font-size:16px}
+.fact span{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.flavor{margin-top:14px;line-height:1.55;font-size:15px}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:#ffcb05;color:#1b1d24;text-transform:uppercase}
+.stat{display:grid;grid-template-columns:72px 38px 1fr;align-items:center;gap:10px;margin:7px 0;font-size:14px}
+.stat .lbl{color:var(--muted);font-weight:600}
+.stat .val{font-weight:700;text-align:right}
+.track{height:10px;border-radius:99px;background:var(--panel2);overflow:hidden}
+.track i{display:block;height:100%;border-radius:99px;transition:width .5s}
+.abil{padding:10px 0;border-bottom:1px solid var(--line)}
+.abil:last-child{border:0}
+.abil b{font-size:15px}
+.abil small{font-size:11px;background:var(--panel2);padding:2px 6px;border-radius:6px;margin-left:6px;color:var(--muted);font-weight:600}
+.abil p{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.45}
+.mgroup{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.mgroup:last-child{border:0}
+.mgroup .x{font-weight:800;min-width:44px;font-size:15px;padding-top:3px}
+.mgroup .ts{display:flex;flex-wrap:wrap;gap:5px}
+.evo{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px}
+.evostage{display:flex;flex-direction:column;gap:8px}
+.evocard{display:flex;flex-direction:column;align-items:center;text-decoration:none;padding:8px;border-radius:14px;width:112px;text-align:center}
+.evocard:hover{background:var(--panel2)}
+.evocard.cur{background:var(--panel2);box-shadow:inset 0 0 0 2px var(--accent)}
+.evocard img{width:84px;height:84px;object-fit:contain}
+.evocard b{font-size:13px}
+.evocard em{font-style:normal;font-size:11px;color:var(--muted);margin-top:2px;line-height:1.3}
+.arrow{color:var(--muted);font-size:22px}
+.evo.wide{flex-direction:column}
+.evo.wide .evostage{flex-direction:row;flex-wrap:wrap;justify-content:center}
+@media (max-width:700px){.evo{flex-direction:column}.evo .arrow{transform:rotate(90deg)}.evo.wide .arrow{transform:none}.evostage{flex-direction:row;flex-wrap:wrap;justify-content:center}}
+.forms{display:flex;gap:8px;flex-wrap:wrap}
+.forms a{display:flex;align-items:center;gap:6px;text-decoration:none;background:var(--panel2);border-radius:10px;padding:4px 10px 4px 4px;font-size:13px;font-weight:600}
+.forms a.cur{box-shadow:inset 0 0 0 2px var(--accent)}
+.forms img{width:34px;height:34px;object-fit:contain}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;cursor:pointer;user-select:none}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+.cls{font-size:11px;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:var(--panel2);color:var(--muted)}
+.scroll{overflow-x:auto}
+.navpn{display:flex;justify-content:space-between;gap:10px;margin-bottom:14px}
+.navpn a{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px;padding:6px 12px 6px 6px;border-radius:12px;background:var(--panel);box-shadow:var(--shadow);max-width:48%}
+.navpn a.next{padding:6px 6px 6px 12px}
+.navpn img{width:36px;height:36px;object-fit:contain}
+.star{border:0;background:none;cursor:pointer;font-size:26px;line-height:1;padding:0 4px;color:#c8ccd8}
+.star.on{color:#ffcb05}
+
+/* Types page */
+.typegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
+.typegrid .type{padding:9px 6px;font-size:12px}
+.sel{outline:3px solid var(--ink);outline-offset:2px}
+.chart{overflow-x:auto}
+.chart table{border-collapse:separate;border-spacing:2px;font-size:12px;width:auto}
+.chart th,.chart td{border:0;padding:0;text-align:center}
+.chart td{width:30px;height:28px;border-radius:5px;font-weight:800;font-size:12px}
+.chart th.rh{text-align:right;padding-right:4px}
+.chart th .type{min-width:0;padding:3px 6px;font-size:9.5px}
+.chart th.col .type{writing-mode:vertical-rl;transform:rotate(180deg);padding:6px 3px}
+.c2{background:#3fa956;color:#fff}.c05{background:#d64045;color:#fff}.c0{background:#2b2d33;color:#fff}.c1{background:var(--panel2)}
+.chart tr:hover td{filter:brightness(.92)}
+
+/* Browse */
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.card{background:var(--panel);border-radius:16px;box-shadow:var(--shadow);text-decoration:none;padding:12px;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;overflow:hidden;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.card::before{content:"";position:absolute;inset:0 0 45% 0;background:var(--tc);opacity:.18}
+.card img{position:relative;width:110px;height:110px;object-fit:contain}
+.card .dexno{font-size:9px;position:relative}
+.card b{font-size:14px;text-align:center}
+.card .ts{display:flex;gap:4px}
+.card .sv{position:absolute;top:8px;right:10px;font-size:12px;font-weight:800;color:var(--muted)}
+
+/* Compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.slot{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.slot img{width:150px;height:150px;object-fit:contain}
+.cmpstat{display:grid;grid-template-columns:1fr 70px 1fr;gap:8px;align-items:center;margin:8px 0;font-size:14px}
+.cmpstat .l{display:flex;justify-content:flex-end;align-items:center;gap:8px}
+.cmpstat .r{display:flex;align-items:center;gap:8px}
+.cmpstat .bar2{height:12px;border-radius:99px}
+.cmpstat .lbl{text-align:center;color:var(--muted);font-weight:700;font-size:12px;text-transform:uppercase}
+.win{font-weight:800;color:var(--good)}
+.picker{position:relative;width:100%;max-width:280px}
+.picker input{width:100%}
+
+/* Team */
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.tslot{background:var(--panel2);border-radius:14px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:190px;justify-content:center;position:relative;text-align:center}
+.tslot img{width:96px;height:96px;object-fit:contain}
+.tslot .rm{position:absolute;top:6px;right:6px;border:0;background:var(--panel);border-radius:8px;width:26px;height:26px;cursor:pointer;color:var(--muted)}
+.cov td,.cov th{text-align:center;padding:6px 4px}
+.cov td:first-child,.cov th:first-child{text-align:left}
+.pos{color:var(--good);font-weight:800}.neg{color:var(--bad);font-weight:800}
+
+/* Quiz */
+.quiz{text-align:center}
+.quiz .art{max-width:320px;margin:0 auto}
+.quiz img.sil{filter:brightness(0) drop-shadow(0 10px 14px rgba(0,0,0,.2))}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:460px;margin:18px auto 0}
+.opts .btn{padding:14px}
+.opts .btn.right{background:var(--good);color:#fff}
+.opts .btn.wrong{background:var(--bad);color:#fff}
+.score{font-family:"Press Start 2P",monospace;font-size:12px;color:var(--muted);margin-bottom:12px}
+
+.home-hero{display:grid;gap:16px}
+.feature{display:flex;gap:14px;align-items:center;text-decoration:none;padding:16px;border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+.feature:hover{transform:translateY(-2px)}
+.feature .em{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;flex:none}
+.feature b{display:block}
+.feature span{font-size:13px;color:var(--muted)}
+footer{max-width:1100px;margin:0 auto;padding:0 16px 30px;font-size:12px;color:var(--muted);text-align:center}
+
+@media (max-width:700px){
+  .logo span{display:none}
+  .hero{grid-template-columns:1fr}
+  .art{max-width:300px;margin:0 auto;width:100%}
+  .cmp{grid-template-columns:1fr 1fr;gap:8px}
+  .slot img{width:100px;height:100px}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .card img{width:90px;height:90px}
+  .opts{grid-template-columns:1fr}
+  main{padding:14px 12px 50px}
+  .panel{padding:16px}
+  .stat{grid-template-columns:62px 34px 1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="logo" href="#/">
+      <img src="data:image/png;base64,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" alt="">
+      <span>PokéDex Pro</span>
+    </a>
+    <div class="search">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <input id="q" type="search" placeholder="Search Pokémon by name or number…" autocomplete="off" aria-label="Search Pokémon">
+      <div class="suggest" id="sug"></div>
+    </div>
+    <button class="iconbtn" id="rand" title="Random Pokémon" aria-label="Random Pokémon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+    </button>
+    <button class="iconbtn" id="theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+  <nav class="tabs"><div class="inner">
+    <a href="#/" data-tab="home">Home</a>
+    <a href="#/browse" data-tab="browse">Browse</a>
+    <a href="#/types" data-tab="types">Types</a>
+    <a href="#/compare" data-tab="compare">Compare</a>
+    <a href="#/team" data-tab="team">Team Builder</a>
+    <a href="#/quiz" data-tab="quiz">Who's That Pokémon?</a>
+    <a href="#/favourites" data-tab="favourites">Favourites</a>
+  </div></nav>
+</header>
+<main id="app">
+  <div class="loading"><svg class="spin" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#fff" stroke="#222" stroke-width="8"/><path d="M6 50a44 44 0 0 1 88 0z" fill="#e3350d" stroke="#222" stroke-width="8"/><circle cx="50" cy="50" r="13" fill="#fff" stroke="#222" stroke-width="8"/></svg>Loading Pokédex…</div>
+</main>
+<footer>Data from <a href="https://pokeapi.co" target="_blank" rel="noopener">PokeAPI</a> (saved into this app) · Images from the PokeAPI sprites project · Pokémon and all related names are trademarks of Nintendo, Game Freak and The Pokémon Company. Fan project, not affiliated.</footer>
+
+<script>
+'use strict';
+const SPR = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+const ART = id => `${SPR}other/official-artwork/${id}.png`;
+const SHINY = id => `${SPR}other/official-artwork/shiny/${id}.png`;
+const HOME = (id, shiny) => `${SPR}other/home/${shiny ? 'shiny/' : ''}${id}.png`;
+const SPRITE = id => `${SPR}${id}.png`;
+const STAT_NAMES = ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'];
+const STAT_SHORT = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'];
+const TYPE_COLORS = {normal:'#9fa19f',fire:'#e62829',water:'#2980ef',electric:'#e6b800',grass:'#3fa129',ice:'#3dcef3',fighting:'#ff8000',poison:'#9141cb',ground:'#915121',flying:'#81b9ef',psychic:'#ef4179',bug:'#91a119',rock:'#afa981',ghost:'#704170',dragon:'#5060e1',dark:'#624d4e',steel:'#60a1b8',fairy:'#ef70ef'};
+const GENS = ['I','II','III','IV','V','VI','VII','VIII','IX'];
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('pdx_' + k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('pdx_' + k, JSON.stringify(v)); } catch {} }
+};
+
+let D, BY_ID = new Map(), BY_KEY = new Map(), BY_SPECIES = new Map(), DEX = [];
+
+// Image with fallbacks: official artwork → HOME render → small sprite
+function img(p, cls = '', shiny = false, attrs = '') {
+  const srcs = shiny ? [SHINY(p.i), HOME(p.i, true), ART(p.i)] : [ART(p.i), HOME(p.i), SPRITE(p.i)];
+  return `<img class="${cls}" src="${srcs[0]}" data-fb="${srcs.slice(1).join('|')}" alt="${esc(p.n)}" loading="lazy" ${attrs} onerror="pfb(this)">`;
+}
+window.pfb = el => {
+  const list = (el.dataset.fb || '').split('|').filter(Boolean);
+  if (!list.length) { el.onerror = null; el.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23bbb" stroke-width="6"/><text x="50" y="62" text-anchor="middle" font-size="34" fill="%23bbb" font-family="sans-serif">?</text></svg>'.replace(/%23/g,'#')); return; }
+  el.src = list.shift(); el.dataset.fb = list.join('|');
+};
+const typePill = (t, sm = false, link = true) => {
+  const n = D.types[t];
+  return link ? `<a class="type t-${n}${sm ? ' sm' : ''}" href="#/types/${n}">${n}</a>` : `<span class="type t-${n}${sm ? ' sm' : ''}">${n}</span>`;
+};
+const dexNo = p => '#' + String(p.s).padStart(4, '0');
+const total = p => p.b.reduce((a, b) => a + b, 0);
+const statColor = v => v < 50 ? '#e5533d' : v < 80 ? '#f0a020' : v < 100 ? '#d8c414' : v < 120 ? '#7bc043' : v < 150 ? '#2eaa5c' : '#1d9bb5';
+
+// Defensive multiplier of attacking type a vs defender type list
+const defMult = (a, defTypes) => defTypes.reduce((m, d) => m * D.eff[a][d], 1);
+function matchups(defTypes) {
+  const out = {};
+  for (let a = 0; a < 18; a++) { const m = defMult(a, defTypes); (out[m] = out[m] || []).push(a); }
+  return out;
+}
+const multLabel = m => m === 0.25 ? '¼×' : m === 0.5 ? '½×' : m + '×';
+
+// ---------- Load ----------
+async function load() {
+  const res = await fetch('pokedata.json');
+  D = await res.json();
+  for (const p of D.pokemon) {
+    BY_ID.set(p.i, p); BY_KEY.set(p.k, p);
+    if (!BY_SPECIES.has(p.s)) BY_SPECIES.set(p.s, []);
+    BY_SPECIES.get(p.s).push(p);
+    p.search = (p.n + ' ' + p.k).toLowerCase();
+  }
+  DEX = D.pokemon.filter(p => p.d).sort((a, b) => a.s - b.s);
+  route();
+}
+
+// ---------- Search ----------
+const q = $('#q'), sug = $('#sug');
+let hl = -1, results = [];
+function searchPokemon(term, limit = 8) {
+  term = term.trim().toLowerCase().replace(/^#/, '');
+  if (!term) return [];
+  if (/^\d+$/.test(term)) {
+    const n = +term;
+    return D.pokemon.filter(p => String(p.s).startsWith(term)).sort((a, b) => (a.s !== n) - (b.s !== n) || a.s - b.s || b.d - a.d).slice(0, limit);
+  }
+  const scored = [];
+  for (const p of D.pokemon) {
+    const name = p.n.toLowerCase();
+    let s = -1;
+    if (name === term) s = 0;
+    else if (name.startsWith(term)) s = 1;
+    else if (name.split(/[\s-]/).some(w => w.startsWith(term))) s = 2;
+    else if (p.search.includes(term)) s = 3;
+    if (s >= 0) scored.push([s + (p.d ? 0 : .5), p]);
+  }
+  return scored.sort((a, b) => a[0] - b[0] || a[1].s - b[1].s).slice(0, limit).map(x => x[1]);
+}
+function renderSuggest() {
+  results = searchPokemon(q.value);
+  hl = results.length ? 0 : -1;
+  if (!q.value.trim()) { sug.classList.remove('open'); return; }
+  sug.innerHTML = results.length ? results.map((p, i) => `<button data-k="${p.k}" class="${i === hl ? 'hl' : ''}">
+    ${img(p)}<span><b>${esc(p.n)}</b><br>${p.t.map(t => typePill(t, true, false)).join(' ')}</span><span class="num">${dexNo(p)}</span></button>`).join('')
+    : '<div style="padding:14px" class="muted">No Pokémon found</div>';
+  sug.classList.add('open');
+}
+q.addEventListener('input', renderSuggest);
+q.addEventListener('focus', () => q.value && renderSuggest());
+q.addEventListener('keydown', e => {
+  const btns = [...sug.querySelectorAll('button')];
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    e.preventDefault(); if (!btns.length) return;
+    hl = (hl + (e.key === 'ArrowDown' ? 1 : -1) + btns.length) % btns.length;
+    btns.forEach((b, i) => b.classList.toggle('hl', i === hl)); btns[hl].scrollIntoView({block: 'nearest'});
+  } else if (e.key === 'Enter') {
+    if (results[hl]) go(results[hl]);
+  } else if (e.key === 'Escape') { sug.classList.remove('open'); q.blur(); }
+});
+sug.addEventListener('mousedown', e => { const b = e.target.closest('button'); if (b) { e.preventDefault(); go(BY_KEY.get(b.dataset.k)); } });
+document.addEventListener('click', e => { if (!e.target.closest('.search')) sug.classList.remove('open'); });
+function go(p) { q.value = ''; sug.classList.remove('open'); q.blur(); location.hash = '#/pokemon/' + p.k; }
+$('#rand').onclick = () => go(DEX[Math.floor(Math.random() * DEX.length)]);
+
+// theme
+const theme = store.get('theme', null);
+if (theme) document.documentElement.dataset.theme = theme;
+$('#theme').onclick = () => {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+  store.set('theme', document.documentElement.dataset.theme);
+};
+
+// ---------- Router ----------
+const app = $('#app');
+function route() {
+  if (!D) return;
+  const [, page = '', arg = ''] = location.hash.replace(/^#/, '').split('/');
+  document.querySelectorAll('nav.tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === (page || 'home')));
+  const views = {'': home, pokemon: pokemonView, types: typesView, browse: browseView, compare: compareView, team: teamView, quiz: quizView, favourites: favView};
+  (views[page] || home)(decodeURIComponent(arg));
+  if (!location.hash.includes('compare') || !arg) window.scrollTo(0, 0);
+}
+addEventListener('hashchange', route);
+
+// ---------- Home ----------
+function home() {
+  const today = DEX[(Math.floor(Date.now() / 864e5) * 7919) % DEX.length];
+  app.innerHTML = `<div class="home-hero">
+    <div class="panel" style="display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center">
+      <a href="#/pokemon/${today.k}" class="art" style="--tc:${TYPE_COLORS[D.types[today.t[0]]]};width:min(160px,32vw)">${img(today)}</a>
+      <div><h2 class="sec" style="margin-bottom:4px">Pokémon of the day</h2>
+      <div class="pname" style="font-size:28px">${esc(today.n)}</div>
+      <div class="row" style="gap:6px">${today.t.map(t => typePill(t, true)).join('')}</div>
+      <p class="muted" style="margin:10px 0 0;font-size:14px;line-height:1.5">${esc(D.species[today.s][2])}</p></div>
+    </div>
+    <div class="grid2">
+      ${[['#/browse','📖','#e3350d','Browse all '+DEX.length+' Pokémon','Filter by type and generation, sort by any stat'],
+         ['#/types','⚔️','#2980ef','Type matchups','Weaknesses, resistances and super-effective hits for any type or dual type'],
+         ['#/compare','📊','#3fa129','Compare','Put two Pokémon side by side, stat for stat'],
+         ['#/team','🛡️','#9141cb','Team Builder','Pick six and see your team\'s shared weaknesses'],
+         ['#/quiz','❓','#e6b800','Who\'s That Pokémon?','Guess the silhouette, filter by generation'],
+         ['#/favourites','⭐','#ff8000','Favourites','The Pokémon you\'ve starred']]
+        .map(([h,e,c,t,s]) => `<a class="feature" href="${h}"><div class="em" style="background:${c}22">${e}</div><div><b>${t}</b><span>${s}</span></div></a>`).join('')}
+    </div>
+    <p class="muted" style="text-align:center;font-size:13px">Tip: press <b>/</b> anywhere to jump to search.</p>
+  </div>`;
+}
+document.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); q.focus(); } });
+
+// ---------- Pokémon detail ----------
+let shinyOn = false;
+function pokemonView(key) {
+  const p = BY_KEY.get(key) || (/^\d+$/.test(key) && BY_SPECIES.get(+key)?.[0]);
+  if (!p) { app.innerHTML = `<div class="panel">Couldn't find “${esc(key)}”. Try the search bar.</div>`; return; }
+  const sp = D.species[p.s];
+  const color = TYPE_COLORS[D.types[p.t[0]]];
+  const favs = store.get('favs', []);
+  const idx = DEX.findIndex(x => x.s === p.s);
+  const prev = DEX[idx - 1], next = DEX[idx + 1];
+  const forms = BY_SPECIES.get(p.s);
+  const mu = matchups(p.t);
+  const groups = [[4,'4×'],[2,'2×'],[1,'1×'],[0.5,'½×'],[0.25,'¼×'],[0,'0×']];
+  const gender = p.gr < 0 ? 'Genderless' : `♂ ${100 - p.gr * 12.5}% · ♀ ${p.gr * 12.5}%`;
+  const tot = total(p);
+
+  app.innerHTML = `
+  <div class="navpn">
+    ${prev ? `<a href="#/pokemon/${prev.k}">${img(prev)}<span>‹ ${esc(prev.n)}</span></a>` : '<span></span>'}
+    ${next ? `<a class="next" href="#/pokemon/${next.k}"><span>${esc(next.n)} ›</span>${img(next)}</a>` : '<span></span>'}
+  </div>
+  <div class="stack">
+  <div class="panel hero">
+    <div class="art" style="--tc:${color}">
+      <div class="tools"><button class="chip ${shinyOn ? 'on' : ''}" id="shiny">✨ Shiny</button></div>
+      ${img(p, '', shinyOn, 'id="mainart"')}
+    </div>
+    <div>
+      <div class="row" style="justify-content:space-between">
+        <span class="dexno">${dexNo(p)} · Gen ${GENS[p.g - 1]}</span>
+        <button class="star ${favs.includes(p.k) ? 'on' : ''}" id="fav" title="Favourite">★</button>
+      </div>
+      <h1 class="pname">${esc(p.n)}</h1>
+      <div class="muted" style="font-weight:600">${esc(sp[1])}</div>
+      <div class="row" style="gap:6px;margin-top:10px">${p.t.map(t => typePill(t)).join('')}</div>
+      <div class="badges">${p.f & 1 ? '<span class="badge">Legendary</span>' : ''}${p.f & 2 ? '<span class="badge">Mythical</span>' : ''}${p.f & 4 ? '<span class="badge" style="background:#ffd6e7">Baby</span>' : ''}</div>
+      <p class="flavor">${esc(sp[2])}</p>
+      <div class="facts">
+        <div class="fact"><b>${(p.h / 10).toFixed(1)} m</b><span>Height</span></div>
+        <div class="fact"><b>${(p.w / 10).toFixed(1)} kg</b><span>Weight</span></div>
+        <div class="fact"><b>${tot}</b><span>Base total</span></div>
+        <div class="fact"><b>${p.cr ?? '—'}</b><span>Catch rate</span></div>
+        <div class="fact"><b style="font-size:13px">${gender}</b><span>Gender</span></div>
+      </div>
+      <div class="row" style="margin-top:14px;gap:8px">
+        <button class="btn sm" id="addTeam">+ Add to team</button>
+        <a class="btn sm" href="#/compare/${p.k}" style="text-decoration:none">Compare…</a>
+      </div>
+    </div>
+  </div>
+
+  ${forms.length > 1 ? `<div class="panel"><h2 class="sec">Forms</h2><div class="forms">${forms.map(f => `<a href="#/pokemon/${f.k}" class="${f === p ? 'cur' : ''}">${img(f)}${esc(f.n)}</a>`).join('')}</div></div>` : ''}
+
+  <div class="grid2">
+    <div class="panel">
+      <h2 class="sec">Base stats</h2>
+      ${p.b.map((v, i) => `<div class="stat"><span class="lbl">${STAT_NAMES[i]}</span><span class="val">${v}</span><div class="track"><i style="width:${Math.min(100, v / 2.55)}%;background:${statColor(v)}"></i></div></div>`).join('')}
+      <div class="stat" style="margin-top:12px"><span class="lbl">Total</span><span class="val">${tot}</span><span class="muted" style="font-size:12px">${rankText(p)}</span></div>
+    </div>
+    <div class="panel">
+      <h2 class="sec">Abilities</h2>
+      ${p.a.map(([id, h]) => `<div class="abil"><b>${esc(D.abilities[id][0])}</b>${h ? '<small>Hidden</small>' : ''}<p>${esc(D.abilities[id][1])}</p></div>`).join('')}
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2 class="sec">Damage taken (type weaknesses)</h2>
+    ${groups.filter(([m]) => mu[m]).map(([m, l]) => `<div class="mgroup"><span class="x" style="color:${m > 1 ? 'var(--bad)' : m < 1 ? 'var(--good)' : 'var(--muted)'}">${l}</span><div class="ts">${mu[m].map(t => typePill(t, true)).join('')}</div></div>`).join('')}
+    <p class="muted" style="font-size:12px;margin:10px 0 0">Based on type only. Abilities like Levitate or Flash Fire can change these.</p>
+  </div>
+
+  ${evoHTML(p)}
+  ${movesHTML(p)}
+  </div>`;
+
+  $('#shiny').onclick = () => { shinyOn = !shinyOn; pokemonView(key); };
+  $('#fav').onclick = e => {
+    let f = store.get('favs', []);
+    f = f.includes(p.k) ? f.filter(x => x !== p.k) : [...f, p.k];
+    store.set('favs', f); e.currentTarget.classList.toggle('on');
+  };
+  $('#addTeam').onclick = e => {
+    const t = store.get('team', []);
+    if (t.length >= 6) { e.target.textContent = 'Team is full (6)'; return; }
+    t.push(p.k); store.set('team', t); e.target.textContent = `✓ Added (${t.length}/6)`;
+  };
+  bindSort(app);
+}
+function rankText(p) {
+  const t = total(p);
+  const better = DEX.filter(x => total(x) > t).length;
+  return `Higher than ${Math.round((DEX.length - better - 1) / DEX.length * 100)}% of Pokémon`;
+}
+function evoHTML(p) {
+  const chain = D.chains[p.c];
+  if (!chain) return `<div class="panel"><h2 class="sec">Evolution</h2><p class="muted" style="margin:0">${esc(p.n)} does not evolve.</p></div>`;
+  const kids = new Map();
+  for (const [s, from, how] of chain) { if (!kids.has(from)) kids.set(from, []); kids.get(from).push([s, how]); }
+  const root = chain.find(c => !c[1] || !chain.some(x => x[0] === c[1]))[0];
+  const card = (s, how) => {
+    const q = BY_SPECIES.get(s)?.find(x => x.d) || BY_SPECIES.get(s)?.[0];
+    if (!q) return '';
+    return `<a class="evocard ${q.s === p.s ? 'cur' : ''}" href="#/pokemon/${q.k}">${img(q)}<b>${esc(q.n)}</b>${how ? `<em>${esc(how)}</em>` : ''}</a>`;
+  };
+  // Build stages
+  const stages = [[[root, '']]];
+  while (true) {
+    const nxt = stages[stages.length - 1].flatMap(([s]) => kids.get(s) || []);
+    if (!nxt.length) break;
+    stages.push(nxt);
+  }
+  const wide = stages.some(st => st.length > 3);
+  return `<div class="panel"><h2 class="sec">Evolution</h2><div class="evo ${wide ? 'wide' : ''}">${stages.map((st, i) => (i ? `<span class="arrow">${wide ? '↓' : '→'}</span>` : '') + `<div class="evostage">${st.map(([s, how]) => card(s, how)).join('')}</div>`).join('')}</div></div>`;
+}
+function movesHTML(p) {
+  if (!p.m) return '';
+  const rows = p.m.map(([id, lvl]) => { const m = D.moves[id]; return {lvl, n: m[0], t: m[1], c: m[2], pw: m[3], ac: m[4], pp: m[5]}; });
+  return `<div class="panel"><h2 class="sec">Moves learnt by level up <span style="text-transform:none;letter-spacing:0;font-weight:500">· ${esc(p.mv)}</span></h2>
+  <div class="scroll"><table class="sortable" data-rows='${esc(JSON.stringify(rows))}'>
+    <thead><tr><th data-k="lvl">Lv.</th><th data-k="n">Move</th><th data-k="t">Type</th><th data-k="c">Class</th><th data-k="pw">Power</th><th data-k="ac">Acc.</th><th data-k="pp">PP</th></tr></thead>
+    <tbody>${moveRows(rows)}</tbody></table></div></div>`;
+}
+const moveRows = rows => rows.map(r => `<tr><td class="n">${r.lvl || 'Evo'}</td><td><b>${esc(r.n)}</b></td><td>${typePill(r.t, true)}</td><td><span class="cls">${r.c}</span></td><td class="n">${r.pw ?? '—'}</td><td class="n">${r.ac ?? '—'}</td><td class="n">${r.pp ?? '—'}</td></tr>`).join('');
+function bindSort(root) {
+  root.querySelectorAll('table.sortable').forEach(tbl => {
+    let rows = JSON.parse(tbl.dataset.rows), dir = {};
+    tbl.querySelectorAll('th').forEach(th => th.onclick = () => {
+      const k = th.dataset.k; dir[k] = !dir[k];
+      rows.sort((a, b) => { const x = a[k] ?? -1, y = b[k] ?? -1; return (x > y ? 1 : x < y ? -1 : 0) * (dir[k] ? 1 : -1); });
+      tbl.querySelector('tbody').innerHTML = moveRows(rows);
+    });
+  });
+}
+
+// ---------- Types ----------
+function typesView(arg) {
+  const sel = (arg || 'fire').split('+').map(n => D.types.indexOf(n)).filter(i => i >= 0).slice(0, 2);
+  if (!sel.length) sel.push(1);
+  const [a] = sel;
+  const color = TYPE_COLORS[D.types[a]];
+  const atk = {2: [], 0.5: [], 0: []};
+  for (let d = 0; d < 18; d++) { const m = D.eff[a][d]; if (m !== 1) atk[m].push(d); }
+  const def = matchups(sel);
+  const groupHTML = (title, items, cls) => `<div class="mgroup"><span class="x ${cls}" style="min-width:auto;flex:none;width:120px;font-size:13px">${title}</span><div class="ts">${items.length ? items.map(t => typePill(t, true)).join('') : '<span class="muted" style="font-size:13px">None</span>'}</div></div>`;
+  const label = sel.map(i => cap(D.types[i])).join(' / ');
+  const examples = DEX.filter(p => p.t.length === sel.length && sel.every(t => p.t.includes(t))).slice(0, 12);
+
+  app.innerHTML = `<div class="stack">
+    <div class="panel">
+      <h2 class="sec">Choose a type <span style="text-transform:none;letter-spacing:0;font-weight:500">· tap a second type for dual-type defence</span></h2>
+      <div class="typegrid">${D.types.map((n, i) => `<button class="type t-${n} ${sel.includes(i) ? 'sel' : sel.length === 2 ? 'off' : ''}" data-i="${i}">${n}</button>`).join('')}</div>
+    </div>
+    <div class="grid2">
+      ${sel.length === 1 ? `<div class="panel" style="border-top:5px solid ${color}">
+        <h2 class="sec">${label} moves attacking</h2>
+        ${groupHTML('Super effective 2×', atk[2], 'pos')}
+        ${groupHTML('Not very effective ½×', atk[0.5], 'neg')}
+        ${groupHTML('No effect 0×', atk[0], 'neg')}
+      </div>` : `<div class="panel" style="border-top:5px solid ${color}">
+        <h2 class="sec">${label} moves attacking</h2>
+        ${sel.map(s => `<div style="margin-bottom:8px"><b>${typePill(s, true, false)}</b> super effective vs: ${D.types.map((_, d) => d).filter(d => D.eff[s][d] === 2).map(t => typePill(t, true)).join(' ')}</div>`).join('')}
+      </div>`}
+      <div class="panel" style="border-top:5px solid ${TYPE_COLORS[D.types[sel[1] ?? a]]}">
+        <h2 class="sec">${label} Pokémon defending</h2>
+        ${def[4] ? groupHTML('Weak 4×', def[4], 'neg') : ''}
+        ${groupHTML('Weak 2×', def[2] || [], 'neg')}
+        ${groupHTML('Resists ½×', def[0.5] || [], 'pos')}
+        ${def[0.25] ? groupHTML('Resists ¼×', def[0.25], 'pos') : ''}
+        ${groupHTML('Immune 0×', def[0] || [], 'pos')}
+      </div>
+    </div>
+    ${examples.length ? `<div class="panel"><h2 class="sec">${label} Pokémon</h2><div class="forms">${examples.map(p => `<a href="#/pokemon/${p.k}">${img(p)}${esc(p.n)}</a>`).join('')}
+      <a href="#/browse" id="seeAll" style="padding:4px 12px">See all →</a></div></div>` : `<div class="panel muted">No Pokémon has exactly this type combination (yet).</div>`}
+    <div class="panel">
+      <h2 class="sec">Full type chart <span style="text-transform:none;letter-spacing:0;font-weight:500">· rows attack, columns defend</span></h2>
+      <div class="chart"><table><thead><tr><th></th>${D.types.map((n, i) => `<th class="col"><span class="type t-${n}">${n.slice(0, 3)}</span></th>`).join('')}</tr></thead>
+      <tbody>${D.types.map((n, ai) => `<tr><th class="rh"><span class="type t-${n}">${n.slice(0, 3)}</span></th>${D.eff[ai].map(m => `<td class="${m === 2 ? 'c2' : m === .5 ? 'c05' : m === 0 ? 'c0' : 'c1'}">${m === 1 ? '' : m === .5 ? '½' : m}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+    </div>
+  </div>`;
+  app.querySelectorAll('.typegrid button').forEach(b => b.onclick = () => {
+    const i = +b.dataset.i; let s = [...sel];
+    if (s.includes(i)) s = s.filter(x => x !== i); else if (s.length < 2) s.push(i); else s = [i];
+    if (!s.length) s = [i];
+    location.hash = '#/types/' + s.map(x => D.types[x]).join('+');
+  });
+  const sa = $('#seeAll'); if (sa) sa.onclick = e => { e.preventDefault(); browseState.types = [...sel]; location.hash = '#/browse'; };
+}
+
+// ---------- Browse ----------
+const browseState = {types: [], gen: 0, sort: 'dex', forms: false, text: '', shown: 60};
+function browseView() {
+  const s = browseState;
+  app.innerHTML = `<div class="panel" style="margin-bottom:16px">
+    <div class="filters">
+      <input class="field" id="bt" placeholder="Filter by name…" value="${esc(s.text)}" style="flex:1;min-width:160px">
+      <select id="bg"><option value="0">All generations</option>${GENS.map((g, i) => `<option value="${i + 1}" ${s.gen === i + 1 ? 'selected' : ''}>Gen ${g}</option>`).join('')}</select>
+      <select id="bs">${[['dex','Dex number'],['name','Name'],['total','Base total'],...STAT_NAMES.map((n, i) => ['s' + i, n])].map(([v, l]) => `<option value="${v}" ${s.sort === v ? 'selected' : ''}>Sort: ${l}</option>`).join('')}</select>
+      <label class="row" style="gap:6px;font-size:14px"><input type="checkbox" id="bf" ${s.forms ? 'checked' : ''}> Include forms & megas</label>
+    </div>
+    <div class="row" style="gap:6px">${D.types.map((n, i) => `<button class="type sm t-${n} ${s.types.length && !s.types.includes(i) ? 'off' : ''}" data-i="${i}">${n}</button>`).join('')}
+    ${s.types.length ? '<button class="btn sm" id="clr">Clear types</button>' : ''}</div>
+  </div><div class="muted" id="bcount" style="margin:0 4px 10px;font-size:13px"></div><div class="cards" id="cards"></div>
+  <div style="text-align:center;margin-top:16px"><button class="btn" id="more">Show more</button></div>`;
+  const draw = () => {
+    let list = (s.forms ? D.pokemon : DEX).filter(p =>
+      (!s.gen || p.g === s.gen) && s.types.every(t => p.t.includes(t)) && (!s.text || p.search.includes(s.text.toLowerCase())));
+    const key = s.sort;
+    list = [...list].sort(key === 'dex' ? (a, b) => a.s - b.s || a.i - b.i : key === 'name' ? (a, b) => a.n.localeCompare(b.n)
+      : key === 'total' ? (a, b) => total(b) - total(a) : (a, b) => b.b[+key[1]] - a.b[+key[1]]);
+    $('#bcount').textContent = `${list.length} Pokémon`;
+    const sv = p => key === 'total' ? total(p) : key[0] === 's' && key !== 'dex' ? `${STAT_SHORT[+key[1]]} ${p.b[+key[1]]}` : '';
+    $('#cards').innerHTML = list.slice(0, s.shown).map(p => `<a class="card" href="#/pokemon/${p.k}" style="--tc:${TYPE_COLORS[D.types[p.t[0]]]}">
+      <span class="sv">${sv(p)}</span>${img(p)}<span class="dexno">${dexNo(p)}</span><b>${esc(p.n)}</b><div class="ts">${p.t.map(t => typePill(t, true, false)).join('')}</div></a>`).join('');
+    $('#more').style.display = list.length > s.shown ? '' : 'none';
+  };
+  draw();
+  $('#bt').oninput = e => { s.text = e.target.value; s.shown = 60; draw(); };
+  $('#bg').onchange = e => { s.gen = +e.target.value; s.shown = 60; draw(); };
+  $('#bs').onchange = e => { s.sort = e.target.value; draw(); };
+  $('#bf').onchange = e => { s.forms = e.target.checked; draw(); };
+  $('#more').onclick = () => { s.shown += 60; draw(); };
+  app.querySelectorAll('.filters ~ .row .type').forEach(b => b.onclick = () => {
+    const i = +b.dataset.i; s.types = s.types.includes(i) ? s.types.filter(x => x !== i) : [...s.types, i].slice(-2); s.shown = 60; browseView();
+  });
+  const clr = $('#clr'); if (clr) clr.onclick = () => { s.types = []; browseView(); };
+}
+
+// ---------- Picker (used by Compare + Team) ----------
+function picker(el, onPick, placeholder = 'Search Pokémon…') {
+  el.innerHTML = `<div class="search picker"><input class="field" placeholder="${placeholder}" style="padding-left:12px"><div class="suggest"></div></div>`;
+  const inp = $('input', el), box = $('.suggest', el);
+  let res = [];
+  inp.oninput = () => {
+    res = searchPokemon(inp.value, 6);
+    box.innerHTML = res.map(p => `<button data-k="${p.k}">${img(p)}<b>${esc(p.n)}</b><span class="num">${dexNo(p)}</span></button>`).join('');
+    box.classList.toggle('open', !!res.length);
+  };
+  inp.onkeydown = e => { if (e.key === 'Enter' && res[0]) onPick(res[0]); };
+  box.onmousedown = e => { const b = e.target.closest('button'); if (b) { e.preventDefault(); onPick(BY_KEY.get(b.dataset.k)); } };
+  inp.onblur = () => setTimeout(() => box.classList.remove('open'), 150);
+}
+
+// ---------- Compare ----------
+function compareView(arg) {
+  const keys = (arg || '').split('+');
+  let A = BY_KEY.get(keys[0]) || BY_KEY.get('charizard'), B = BY_KEY.get(keys[1]) || BY_KEY.get('blastoise');
+  const slot = (p, side) => `<div class="slot"><a href="#/pokemon/${p.k}">${img(p)}</a><b style="font-size:18px">${esc(p.n)}</b>
+    <div class="row" style="gap:4px;justify-content:center">${p.t.map(t => typePill(t, true)).join('')}</div><div id="pk${side}" style="width:100%;display:flex;justify-content:center"></div></div>`;
+  const maxV = Math.max(...A.b, ...B.b, 150);
+  const line = (a, b, lbl) => `<div class="cmpstat"><div class="l"><span class="${a > b ? 'win' : ''}">${a}</span><span class="bar2" style="width:${a / maxV * 100}%;background:${statColor(a)}"></span></div>
+    <div class="lbl">${lbl}</div><div class="r"><span class="bar2" style="width:${b / maxV * 100}%;background:${statColor(b)}"></span><span class="${b > a ? 'win' : ''}">${b}</span></div></div>`;
+  // Best attacking multiplier using own STAB types
+  const offence = (x, y) => Math.max(...x.t.map(t => defMult(t, y.t)));
+  const speed = A.b[5] === B.b[5] ? 'Speed tie' : `${(A.b[5] > B.b[5] ? A : B).n} moves first`;
+  app.innerHTML = `<div class="panel">
+    <div class="cmp">${slot(A, 'A')}${slot(B, 'B')}</div>
+    <div style="margin-top:20px">${A.b.map((v, i) => line(v, B.b[i], STAT_SHORT[i])).join('')}${line(total(A), total(B), 'Total').replace(/width:[\d.]+%/g, m => 'width:' + Math.min(100, parseFloat(m.slice(6)) / 6) + '%')}</div>
+  </div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="panel"><h2 class="sec">Head to head</h2>
+      <p style="margin:0 0 8px">⚡ ${esc(speed)} (base Speed ${A.b[5]} vs ${B.b[5]}).</p>
+      <p style="margin:0 0 8px">${esc(A.n)}'s best same-type attack hits ${esc(B.n)} for <b>${multLabel(offence(A, B))}</b>.</p>
+      <p style="margin:0">${esc(B.n)}'s best same-type attack hits ${esc(A.n)} for <b>${multLabel(offence(B, A))}</b>.</p>
+    </div>
+    <div class="panel"><h2 class="sec">Height & weight</h2>
+      <p style="margin:0 0 8px">${esc(A.n)}: ${(A.h / 10).toFixed(1)} m, ${(A.w / 10).toFixed(1)} kg</p>
+      <p style="margin:0">${esc(B.n)}: ${(B.h / 10).toFixed(1)} m, ${(B.w / 10).toFixed(1)} kg</p>
+    </div>
+  </div>`;
+  picker($('#pkA'), p => location.hash = `#/compare/${p.k}+${B.k}`, 'Swap left…');
+  picker($('#pkB'), p => location.hash = `#/compare/${A.k}+${p.k}`, 'Swap right…');
+}
+
+// ---------- Team ----------
+function teamView() {
+  const team = store.get('team', []).map(k => BY_KEY.get(k)).filter(Boolean);
+  const slots = Array.from({length: 6}, (_, i) => team[i]);
+  const cov = D.types.map((n, a) => {
+    let weak = 0, res = 0;
+    for (const p of team) { const m = defMult(a, p.t); if (m > 1) weak++; else if (m < 1) res++; }
+    const hits = team.some(p => p.t.some(t => D.eff[t][a] === 2));
+    return {a, weak, res, hits};
+  });
+  const avg = team.length ? STAT_SHORT.map((_, i) => Math.round(team.reduce((s, p) => s + p.b[i], 0) / team.length)) : null;
+  const danger = cov.filter(c => c.weak >= 3 && c.weak > c.res);
+  const noHit = cov.filter(c => !c.hits);
+  app.innerHTML = `<div class="stack">
+    <div class="panel"><div class="row" style="justify-content:space-between;margin-bottom:12px"><h2 class="sec" style="margin:0">Your team (${team.length}/6)</h2>
+      ${team.length ? '<button class="btn sm" id="clearTeam">Clear team</button>' : ''}</div>
+      <div class="team">${slots.map((p, i) => p ? `<div class="tslot"><button class="rm" data-i="${i}" title="Remove">✕</button><a href="#/pokemon/${p.k}">${img(p)}</a><b>${esc(p.n)}</b><div class="row" style="gap:4px;justify-content:center">${p.t.map(t => typePill(t, true)).join('')}</div></div>`
+        : `<div class="tslot"><span class="muted" style="font-size:13px">Empty slot</span><div class="addslot" style="width:100%"></div></div>`).join('')}</div>
+    </div>
+    ${team.length ? `<div class="grid2">
+      <div class="panel"><h2 class="sec">Summary</h2>
+        ${danger.length ? `<p style="margin:0 0 10px">⚠️ <b>Shared weakness:</b> ${danger.map(c => typePill(c.a, true)).join(' ')} — 3 or more of your team are weak to ${danger.length > 1 ? 'these' : 'this'}.</p>` : '<p style="margin:0 0 10px">✅ No type hits three or more of your team super-effectively.</p>'}
+        ${noHit.length ? `<p style="margin:0 0 10px">🎯 <b>Coverage gaps:</b> no same-type attack on your team is super effective against ${noHit.map(c => typePill(c.a, true)).join(' ')}</p>` : '<p style="margin:0 0 10px">🎯 Your same-type attacks hit every type super-effectively.</p>'}
+        <p style="margin:0" class="muted">Average stats: ${avg.map((v, i) => `${STAT_SHORT[i]} <b style="color:var(--ink)">${v}</b>`).join(' · ')}</p>
+      </div>
+      <div class="panel"><h2 class="sec">Defensive coverage</h2><div class="scroll"><table class="cov"><thead><tr><th>Attacking type</th><th>Weak</th><th>Resist</th></tr></thead>
+        <tbody>${cov.map(c => `<tr><td>${typePill(c.a, true)}</td><td class="${c.weak ? 'neg' : 'muted'}">${c.weak || '–'}</td><td class="${c.res ? 'pos' : 'muted'}">${c.res || '–'}</td></tr>`).join('')}</tbody></table></div></div>
+    </div>` : '<div class="panel muted">Add Pokémon using the slots above, or with “+ Add to team” on any Pokémon page.</div>'}
+  </div>`;
+  app.querySelectorAll('.rm').forEach(b => b.onclick = () => { const t = store.get('team', []); t.splice(+b.dataset.i, 1); store.set('team', t); teamView(); });
+  const first = app.querySelector('.addslot');
+  if (first) picker(first, p => { const t = store.get('team', []); t.push(p.k); store.set('team', t.slice(0, 6)); teamView(); }, 'Add Pokémon…');
+  const ct = $('#clearTeam'); if (ct) ct.onclick = () => { store.set('team', []); teamView(); };
+}
+
+// ---------- Quiz ----------
+const quiz = {score: 0, streak: 0, best: store.get('best', 0), gen: 0};
+function quizView() {
+  const pool = DEX.filter(p => !quiz.gen || p.g === quiz.gen);
+  const ans = pool[Math.floor(Math.random() * pool.length)];
+  const opts = [ans];
+  while (opts.length < 4) { const r = pool[Math.floor(Math.random() * pool.length)]; if (!opts.includes(r)) opts.push(r); }
+  opts.sort(() => Math.random() - .5);
+  app.innerHTML = `<div class="panel quiz">
+    <div class="row" style="justify-content:space-between;margin-bottom:10px">
+      <div class="score">SCORE ${quiz.score} · STREAK ${quiz.streak} · BEST ${quiz.best}</div>
+      <select id="qg"><option value="0">All gens</option>${GENS.map((g, i) => `<option value="${i + 1}" ${quiz.gen === i + 1 ? 'selected' : ''}>Gen ${g}</option>`).join('')}</select>
+    </div>
+    <h2 style="font-family:'Press Start 2P',monospace;font-size:clamp(13px,3vw,18px);margin-bottom:16px">Who's that Pokémon?</h2>
+    <div class="art" style="--tc:#2980ef">${img(ans, 'sil', false, 'id="qimg" draggable="false"').replace('loading="lazy"', '')}</div>
+    <div class="opts">${opts.map(o => `<button class="btn" data-k="${o.k}">${esc(o.n)}</button>`).join('')}</div>
+    <div id="qnext" style="margin-top:16px;min-height:42px"></div>
+  </div>`;
+  $('#qg').onchange = e => { quiz.gen = +e.target.value; quizView(); };
+  app.querySelectorAll('.opts .btn').forEach(b => b.onclick = () => {
+    if (app.querySelector('.opts .right')) return;
+    const ok = b.dataset.k === ans.k;
+    app.querySelectorAll('.opts .btn').forEach(x => { if (x.dataset.k === ans.k) x.classList.add('right'); });
+    if (!ok) b.classList.add('wrong');
+    if (ok) { quiz.score++; quiz.streak++; if (quiz.streak > quiz.best) { quiz.best = quiz.streak; store.set('best', quiz.best); } } else quiz.streak = 0;
+    $('#qimg').classList.remove('sil');
+    $('.score').textContent = `SCORE ${quiz.score} · STREAK ${quiz.streak} · BEST ${quiz.best}`;
+    $('#qnext').innerHTML = `<p style="margin:0 0 10px;font-weight:700">${ok ? '🎉 Correct!' : '❌ Not quite!'} It's ${esc(ans.n)}.</p><button class="btn primary" id="qn">Next →</button> <a class="btn" style="text-decoration:none" href="#/pokemon/${ans.k}">View ${esc(ans.n)}</a>`;
+    $('#qn').onclick = quizView; $('#qn').focus();
+  });
+}
+
+// ---------- Favourites ----------
+function favView() {
+  const favs = store.get('favs', []).map(k => BY_KEY.get(k)).filter(Boolean);
+  app.innerHTML = favs.length ? `<h2 class="sec">Your favourites</h2><div class="cards">${favs.map(p => `<a class="card" href="#/pokemon/${p.k}" style="--tc:${TYPE_COLORS[D.types[p.t[0]]]}">${img(p)}<span class="dexno">${dexNo(p)}</span><b>${esc(p.n)}</b><div class="ts">${p.t.map(t => typePill(t, true, false)).join('')}</div></a>`).join('')}</div>`
+    : '<div class="panel muted">No favourites yet. Tap the ★ on any Pokémon page to save it here.</div>';
+}
+
+load().catch(err => { app.innerHTML = `<div class="panel">Couldn't load the Pokédex data (${esc(err.message)}). If you opened this file directly, serve it from GitHub Pages or a local web server instead.</div>`; });
+</script>
+</body>
+</html>
